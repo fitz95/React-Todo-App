@@ -15,4 +15,4 @@ const useOnClickOutside = (ref, currentState, updater) => {
   }, [ref, currentState, updater]);
 };
 
-export default { useOnClickOutside };
+export default useOnClickOutside;

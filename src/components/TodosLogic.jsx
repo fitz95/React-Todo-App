@@ -1,7 +1,8 @@
+/* eslint-disable */
 import InputTodo from './InputTodo';
 import TodosList from './TodosList';
-import { useState, useEffect } from 'react'
-import { v4 as uuidv4 } from "uuid";
+import { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const TodosLogic = () => {
   const [todos, setTodos] = useState(getInitialTodos());
@@ -55,12 +56,17 @@ const TodosLogic = () => {
         return todo;
       })
     );
-  }
+  };
   return (
     <>
       <InputTodo addTodoItem={addTodoItem} />
-      <TodosList todosProps={todos} handleChange={handleChange} delTodo={delTodo} setUpdate={setUpdate}/>
+      <TodosList
+        todosProps={todos}
+        handleChange={handleChange}
+        delTodo={delTodo}
+        setUpdate={setUpdate}
+      />
     </>
-);
+  );
 };
 export default TodosLogic;

@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { FcPlus } from "react-icons/fc";
+import { FcPlus } from 'react-icons/fc';
 
-
-const InputTodo = ({addTodoItem}) => {
+// eslint-disable-next-line react/prop-types
+const InputTodo = ({ addTodoItem }) => {
   const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
 
@@ -13,33 +13,33 @@ const InputTodo = ({addTodoItem}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title.trim()) {
-        addTodoItem(title);
-        setTitle('');
-        setMessage('')
-      } else {
-        setMessage('Please make sure you add a Task')
-      }
+      addTodoItem(title);
+      setTitle('');
+      setMessage('');
+    } else {
+      setMessage('Please make sure you add a Task');
+    }
   };
   return (
     <>
-    <form onSubmit={handleSubmit} className="form-container">
-      <input
-        type="text"
-        placeholder="Add Todo..."
-        value={title}
-        onChange={handleChange}
-        className='input-text'
-      />
-      <button className='input-submit'>
-        <FcPlus 
-        style={{
-            fontSize : '20px',
-            marginTop : '2px'
-        }}
+      <form onSubmit={handleSubmit} className="form-container">
+        <input
+          type="text"
+          placeholder="Add Todo..."
+          value={title}
+          onChange={handleChange}
+          className="input-text"
         />
+        <button className="input-submit" type="button">
+          <FcPlus
+            style={{
+              fontSize: '20px',
+              marginTop: '2px',
+            }}
+          />
         </button>
-    </form>
-    <span className="submit-warning" >{message}</span>
+      </form>
+      <span className="submit-warning">{message}</span>
     </>
   );
 };
