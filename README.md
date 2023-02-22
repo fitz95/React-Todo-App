@@ -42,7 +42,10 @@ VS Code
 
 ### Key Features <a name="key-features"></a>
 
-- **Add Multiply Divide Substaract**
+- **Add Todo Ativity**
+- **Edit Todo Ativity**
+- **Remove Todo Ativity**
+- **Route Navigation Todo App**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
